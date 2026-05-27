@@ -1,7 +1,11 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { X } from "lucide-react";
-import { questionData, personalityProfiles, translations } from "../data/translations";
+import {
+  questionData,
+  personalityProfiles,
+  translations,
+} from "../data/translations";
 
 interface QuizInterfaceProps {
   onComplete: (answers: string[]) => void;
@@ -9,12 +13,12 @@ interface QuizInterfaceProps {
 }
 
 const images = [
-  "/src/imports/illusion-1.png",
-  "/src/imports/illusion-2.png",
-  "/src/imports/illusion-3.png",
-  "/src/imports/illusion-4.png",
-  "/src/imports/illusion-5.png",
-  "/src/imports/illusion-6.png",
+  "/illusion-images/illusion-1.png",
+  "/illusion-images/illusion-2.png",
+  "/illusion-images/illusion-3.png",
+  "/illusion-images/illusion-4.png",
+  "/illusion-images/illusion-5.png",
+  "/illusion-images/illusion-6.png",
 ];
 
 export function QuizInterface({ onComplete, language }: QuizInterfaceProps) {
@@ -38,7 +42,10 @@ export function QuizInterface({ onComplete, language }: QuizInterfaceProps) {
 
     const newAnswers = [...answers, trait];
     const option = question.options.find((item) => item.trait === trait);
-    const profile = personalityProfiles[language][trait as keyof (typeof personalityProfiles)["en"]];
+    const profile =
+      personalityProfiles[language][
+        trait as keyof (typeof personalityProfiles)["en"]
+      ];
 
     setAnswers(newAnswers);
     setSelectedResult(
@@ -75,7 +82,8 @@ export function QuizInterface({ onComplete, language }: QuizInterfaceProps) {
       <div className="px-6 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-sm text-gray-400">
-            {t.questionCounter} {currentQuestion + 1} {language === "en" ? "of" : "/"} {questions.length}
+            {t.questionCounter} {currentQuestion + 1}{" "}
+            {language === "en" ? "of" : "/"} {questions.length}
           </div>
         </div>
       </div>

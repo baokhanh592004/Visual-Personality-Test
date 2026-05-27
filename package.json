@@ -83,10 +83,5 @@
       "optional": true
     }
   },
-  "pnpm": {
-    "overrides": {
-      "vite": "6.3.5"
-    }
-  },
   "homepage": "https://github.com/baokhanh592004/Visual-Personality-Test.git"
 }
