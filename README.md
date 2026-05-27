@@ -5,8 +5,6 @@
 
   ## Running the code
 
-  This project uses `pnpm` as the package manager.
-
   Run `pnpm install` to install the dependencies.
 
   Run `pnpm run dev` to start the development server.
