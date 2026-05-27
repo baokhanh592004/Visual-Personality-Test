@@ -5,7 +5,9 @@
 
   ## Running the code
 
-  Run `npm i` to install the dependencies.
+  This project uses `pnpm` as the package manager.
 
-  Run `npm run dev` to start the development server.
+  Run `pnpm install` to install the dependencies.
+
+  Run `pnpm run dev` to start the development server.
   
